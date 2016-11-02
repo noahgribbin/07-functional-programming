@@ -89,9 +89,9 @@
 
       },[]);
       // console.log(uniqueAuthors);
-    //return    TODO: return just the author names
+    //return    TODO: DONE return just the author names
 
-  /* TODO: For our reduce that we'll chain here -- since we are trying to
+  /* TODO: DONE For our reduce that we'll chain here -- since we are trying to
       return an array, we'll need to specify an accumulator type (AKA initial value)
       What should this accumulator be and where is it placed? */
   };
@@ -102,14 +102,19 @@
       the matching articles written by the specified author. */
     return Article.allAuthors().map(function(author) {
       return {
-      /* TODO: complete these properties:
-      name:
-      numWords: someCollection.filter(function(curArticle) {
-       return a condition here to check for matching authors
-      })
-      .map(...) // TODO: use .map to return the author's word count for each article's body (hint: regexp!).
-      .reduce(...) // TODO: squash this array of numbers into one big number!
-      */
+      // TODO: complete these properties:
+        name: author,
+        numWords: Article.allArticles.map(function(article) {
+          article.body.split(' ');
+          console.log(article.body.split(' '));
+        })
+      // .filter(function(curArticle) {
+      //  return a condition here to check for matching authors
+      // })
+      // .map(...) // TODO: use .map to return the author's word count for each article's body (hint: regexp!).
+      // .reduce(...) // TODO: squash this array of numbers into one big number!
+      // */
+
       };
     });
   };
