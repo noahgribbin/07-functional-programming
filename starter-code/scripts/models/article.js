@@ -105,18 +105,20 @@
       // TODO: complete these properties:
         name: author,
         numWords: Article.allArticles.map(function(article) {
-          //Article.allArticles.filter(function(author) {
-            //article.body.split(' ').length;
-          console.log(author);
-          //});
-      // .filter(function(curArticle) {
-      //  return a condition here to check for matching authors
-      // })
+          if(article.author === author) {
+            return article.body.split(' ').length;
+          } else {
+            return 0;
+          };
+        })
+          .reduce(function(prev, curr) {
+            // console.log(prev, curr);
+            return prev + curr;
+          })
       // .map(...) // TODO: use .map to return the author's word count for each article's body (hint: regexp!).
       // .reduce(...) // TODO: squash this array of numbers into one big number!
       // */
 
-        })
       };
     });
   };
