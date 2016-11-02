@@ -105,9 +105,10 @@
       // TODO: complete these properties:
         name: author,
         numWords: Article.allArticles.map(function(article) {
-          article.body.split(' ');
-          console.log(article.body.split(' '));
-        })
+          //Article.allArticles.filter(function(author) {
+            //article.body.split(' ').length;
+          console.log(author);
+          //});
       // .filter(function(curArticle) {
       //  return a condition here to check for matching authors
       // })
@@ -115,6 +116,7 @@
       // .reduce(...) // TODO: squash this array of numbers into one big number!
       // */
 
+        })
       };
     });
   };
