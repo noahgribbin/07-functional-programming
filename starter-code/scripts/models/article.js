@@ -70,14 +70,25 @@
       return article.body.split(' ').length;
     })
     // TODO: complete this reduce to get a grand total word count
-    .reduce(function() {
-    });
+    // DONE
+    .reduce(function(curr, next, index, array) {
+      return curr + next;
+    }, 0);
   };
 
   /* Chain together a `map` and a `reduce` call to
           produce an array of *unique* author names. */
   Article.allAuthors = function() {
-  //return       TODO: map our collection
+    return Article.allArticles.map(function(article) {
+      // console.log(article.author);
+      return article.author;
+    })
+      .reduce(function(acc, curr){
+        if (acc.indexOf(curr) < 0) acc.push(curr);
+        return acc;
+
+      },[]);
+      // console.log(uniqueAuthors);
     //return    TODO: return just the author names
 
   /* TODO: For our reduce that we'll chain here -- since we are trying to
